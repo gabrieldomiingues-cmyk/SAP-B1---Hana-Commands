@@ -58,10 +58,10 @@ FROM
                 T2."CEST",
                 T0."ProductSrc",
                 T3."Desc" 
-                FROM "PRD_GRACIOSA"."OITM"  T0 
-                INNER JOIN "PRD_GRACIOSA"."ONCM"  T1 
+                FROM "SAP_SCHEMA"."OITM"  T0 
+                INNER JOIN "SAP_SCHEMA"."ONCM"  T1 
                 ON T0."NCMCode" = T1."AbsEntry" 
-                INNER JOIN "PRD_GRACIOSA"."OCEST"  T2 
+                INNER JOIN "SAP_SCHEMA"."OCEST"  T2 
                 ON T0."CESTCode" = T2."AbsId"
                 INNER JOIN OPSC T3
                 ON T3."Code" = T0."ProductSrc") T9
@@ -72,4 +72,5 @@ WHERE
     AND T0."CANCELED" = 'N' 
     AND T0."DocNum" NOT IN ('31','34','40')
 ORDER BY
+
     T0."DocNum"
