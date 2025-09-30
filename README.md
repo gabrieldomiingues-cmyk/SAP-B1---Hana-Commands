@@ -1,2 +1,2 @@
-# SAP-B1---Hana-Commands
+# SAP B1 - Hana Commands
 Querys - Transactions
